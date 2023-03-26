@@ -32,7 +32,7 @@
 #include "ns3/data-rate.h"
 #include "ns3/traced-callback.h"
 #include "ns3/seq-ts-size-header.h"
-#include "seq-ts-size-header2.h"
+#include "ns3/seq-ts-size-header2.h"
 #include "ns3/inet-socket-address.h"
 #include <unordered_map>
 
@@ -248,6 +248,8 @@ private:
   /// Callback for tracing the packet Tx events, includes source, destination, the packet sent, and header
   TracedCallback<Ptr<const Packet>, const Address &, const Address &, const SeqTsSizeHeader &> m_txTraceWithSeqTsSize;
 
+  TracedCallback<Ptr<const Packet>, const Address &, const Address &, const SeqTsSizeHeader2 &> m_txTraceWithSeqTsSize2;
+
 private:
   /**
    * \brief Schedule the next packet transmission
@@ -341,6 +343,7 @@ private:
         TracedCallback<Ptr<const Packet>, const Address &, const Address &> m_rxTraceWithAddresses;
         /// Callbacks for tracing the packet Rx events, includes source, destination addresses, and headers
         TracedCallback<Ptr<const Packet>, const Address &, const Address &, const SeqTsSizeHeader&> m_rxTraceWithSeqTsSize;
+        TracedCallback<Ptr<const Packet>, const Address &, const Address &, const SeqTsSizeHeader2&> m_rxTraceWithSeqTsSize2;
         //パケット受信に関するもの(ここまで)
 
 

@@ -33,6 +33,8 @@
 #include "ns3/traced-callback.h"
 #include "ns3/seq-ts-size-header.h"
 
+#include "ns3/seq-ts-size-header2.h"
+
 namespace ns3 {
 
 class Address;
@@ -186,7 +188,6 @@ private:
 
   /// Callback for tracing the packet Tx events, includes source, destination, the packet sent, and header
   TracedCallback<Ptr<const Packet>, const Address &, const Address &, const SeqTsSizeHeader &> m_txTraceWithSeqTsSize;
-
 private:
   /**
    * \brief Schedule the next packet transmission
