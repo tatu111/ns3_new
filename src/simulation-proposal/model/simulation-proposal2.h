@@ -36,6 +36,7 @@
 #include <unordered_map>
 
 #include "ns3/olsr-routing-protocol.h"
+#include "ns3/seq-ts-size-header2.h"
 
 //class RoutingProtocol;
 

@@ -40,7 +40,7 @@ SeqTsSizeHeader2::GetTypeId (void)
 {
   static TypeId tid = TypeId ("ns3::SeqTsSizeHeader2")
     .SetParent<SeqTsHeader> ()
-    .SetGroupName ("simulation-proposal")
+    .SetGroupName ("Applications")
     .AddConstructor<SeqTsSizeHeader2> ()
   ;
   return tid;

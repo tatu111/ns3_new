@@ -12,6 +12,7 @@ def build(bld):
         'model/simulation-proposal.cc',
         'model/simulation-proposal2.cc',
         'model/rand-simulation.cc',
+        'model/seq-ts-size-header2.cc',
         'helper/simulation-proposal-helper.cc',
         'helper/simulation-proposal-helper2.cc',
         ]
@@ -32,6 +33,7 @@ def build(bld):
         'model/simulation-proposal.h',
         'model/simulation-proposal2.h',
         'model/rand-simulation.h',
+        'model/seq-ts-size-header2.h',
         'helper/simulation-proposal-helper.h',
         'helper/simulation-proposal-helper2.h',
         ]

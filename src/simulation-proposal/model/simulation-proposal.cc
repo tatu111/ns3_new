@@ -49,6 +49,7 @@
 #include "ns3/olsr-routing-protocol.h"
 #include <random>
 #include "ns3/ipv4-list-routing.h"
+#include "ns3/seq-ts-size-header2.h"
 //
 
 namespace ns3 {
@@ -612,7 +613,7 @@ void SimulationProposal::SendPacket ()
       NS_ABORT_IF (m_pktSize < header.GetSerializedSize ());
       packet = Create<Packet> (m_pktSize - header.GetSerializedSize ());
       // Trace before adding header, for consistency with PacketSink
-      m_txTraceWithSeqTsSize (packet, from, to, header);
+      m_txTraceWithSeqTsSize2 (packet, from, to, header);
       packet->AddHeader (header);
     }
   else
@@ -744,7 +745,7 @@ SimulationProposal::PacketReceived (const Ptr<Packet> &p, const Address &from,
 
       complete->RemoveHeader (header);
 
-      m_rxTraceWithSeqTsSize (complete, from, localAddress, header);
+      m_rxTraceWithSeqTsSize2 (complete, from, localAddress, header);
 
       if (buffer->GetSize () > header.GetSerializedSize ())
         {
